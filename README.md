@@ -81,3 +81,18 @@ Deploying Tensor Parallelism across production computing infrastructure requires
 | [**Low-Latency Real-Time Enterprise Inference Serving**](./details/inference_serving.md) | Deployed within orchestration engines like vLLM, TensorRT-LLM, or TGI. | Slicing a model across a TP group increases the memory bus bandwidth available to read model weights, drastically compressing **Time-to-First-Token (TTFT)** metrics for simultaneous multi-user streams. | 2023 | [vLLM (Kwon et al., 2023)](https://arxiv.org/abs/2309.06180) |
 | [**Long-Context Window Autoregressive Generation**](./details/long_context_generation.md) | Processing extreme prompt context boundaries (e.g., full books or continuous software repositories). | Tensor and Sequence parallelism divide massive multi-gigabyte activation matrices across separate hardware nodes, safely preventing cluster-wide Out-Of-Memory memory crashes. | 2023 | [Ring Attention (Liu et al., 2023)](https://arxiv.org/abs/2310.01889) |
 
+---
+
+##  Star History
+
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-Tensor-Parallelism&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Tensor-Parallelism&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Tensor-Parallelism&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Tensor-Parallelism&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
+
+
