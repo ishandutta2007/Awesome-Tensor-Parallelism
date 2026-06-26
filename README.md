@@ -10,7 +10,10 @@ Tensor Parallelism (TP) is a hardware-aware distributed training and inference f
 The technical progression of intra-layer model parallelization has transitioned from fundamental matrix partitioning to fused multi-dimensional communication layouts.
 
 ```mermaid
-[Megatron-LM 1D (Shoeybi et al., 2019)] ----> [2D / 2.5D / 3D Spatial Parallelism] ----> [Sequence & Fused Flash-TP (2024+)](Row & Column Wise Splitting)               (Grid Matrix Communication Cuts)            (KV Cache Memory Compression)
+flowchart LR
+    A["Megatron-LM 1D (Shoeybi et al., 2019)<br/>(Row & Column-Wise Splitting)"]
+    --> B["2D / 2.5D / 3D Spatial Parallelism<br/>(Grid Matrix Communication Cuts)"]
+    --> C["Sequence & Fused Flash-TP (2024+)<br/>(KV Cache Memory Compression)"]
 ```
 
 *   **The 1D Megatron-LM Baseline Era (Shoeybi et al., 2019)**
