@@ -1,11 +1,24 @@
-# Awesome-Tensor-Parallelism
-## Tensor Parallelism (TP): Evolution, Variants, Types, & Applications
+# 🚀 Awesome Tensor Parallelism
+
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Tensor Parallelism Banner" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a><a href="https://github.com/ishandutta2007/Awesome-Tensor-Parallelism/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Tensor-Parallelism?style=flat-square" alt="Stars"/></a><a href="https://github.com/ishandutta2007/Awesome-Tensor-Parallelism/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Tensor-Parallelism?style=flat-square" alt="Forks"/></a><a href="https://github.com/ishandutta2007/Awesome-Tensor-Parallelism/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Tensor-Parallelism?style=flat-square" alt="License"/></a><a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+---
+
+## 📖 Tensor Parallelism (TP): Evolution, Variants, Types, & Applications
+
+> **SEO Description:** A curated list of resources, concepts, and architectures for Tensor Parallelism (TP) in distributed deep learning. Learn about Megatron-LM 1D, 2D/2.5D/3D grid splitting, Sequence Parallelism, and zero-redundancy optimization for training and serving multi-hundred-billion parameter LLMs.
 
 Tensor Parallelism (TP) is a hardware-aware distributed training and inference framework designed to scale up intra-node deep learning operations. When a Large Language Model (LLM) possesses more parameters than can physically fit into the Video RAM (VRAM) of a single GPU, tensor parallelism shards individual weight matrices *within a single layer* across multiple graphics cards concurrently. Unlike Pipeline Parallelism (which distributes sequential layers across different devices), TP splits execution at the raw linear algebra level, using collective communication primitives to calculate single-matrix matrix multiplications in parallel across high-speed interconnects.
 
 ---
 
-## 1. The Chronological Evolution
+## 📅 1. The Chronological Evolution
 
 The technical progression of intra-layer model parallelization has transitioned from fundamental matrix partitioning to fused multi-dimensional communication layouts.
 
@@ -24,7 +37,7 @@ flowchart LR
 
 ---
 
-## 2. Core Functional & Splitting Variants
+## ⚙️ 2. Core Functional & Splitting Variants
 
 The baseline 1D Tensor Parallelism framework relies on two complementary matrix decomposition strategies deployed systematically across a Transformer's layer blocks.
 
@@ -35,7 +48,7 @@ The baseline 1D Tensor Parallelism framework relies on two complementary matrix 
 
 ---
 
-## 3. Communication Communication Operations & Latency Drivers
+## 📡 3. Communication Operations & Latency Drivers
 
 Because Tensor Parallelism splits individual matrix elements, the GPUs must constantly exchange tracking calculations using low-level collective communication steps.
 
@@ -49,7 +62,7 @@ Because Tensor Parallelism splits individual matrix elements, the GPUs must cons
 
 ---
 
-## 4. Production Engineering Challenges & Mitigations
+## 🛠️ 4. Production Engineering Challenges & Mitigations
 
 Deploying Tensor Parallelism across production computing infrastructure requires balancing deep algorithmic math with hardware layout physics.
 
@@ -60,7 +73,7 @@ Deploying Tensor Parallelism across production computing infrastructure requires
 
 ---
 
-## 5. Frontier Distributed Applications
+## 🌐 5. Frontier Distributed Applications
 
 | Distributed Application | Target Scenario & Scope | Core System Configuration | Year First Used | First Paper Link |
 | :--- | :--- | :--- | :---: | :--- |
